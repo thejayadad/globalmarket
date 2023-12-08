@@ -2,15 +2,20 @@ import React from 'react'
 import MenuLinks from './MenuLinks'
 import Logo from './Logo'
 import AuthLinks from './AuthLinks'
+import Box from '@/components/Box'
+
+
 
 const Navbar = () => {
   return (
-    <header className='px-4 bg-white shadow-sm'>
-        <div className='flex justify-between max-w-xl mx-auto'>
+    <header className='px-4 py-8 bg-white shadow-sm'>
+     <Box>
+     <nav className='flex justify-between items-center'>
             <MenuLinks />
-            <Logo />
+            <Logo size={'200px'} />
             <AuthLinks />
-        </div>
+        </nav>
+     </Box>
     </header>
   )
 }
