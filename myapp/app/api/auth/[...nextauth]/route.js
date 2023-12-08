@@ -31,13 +31,13 @@ const handler = NextAuth({
                 } else {
                     const { password, ...currentUser } = user._doc
 
-                    const isAdmin = email === "thejayadad@gmail.com";
+                    const admin = email === "thejayadad@gmail.com";
 
-                    const accessToken = signJwtToken({ ...currentUser, isAdmin }, {expiresIn: '6d'})
+                    const accessToken = signJwtToken({ ...currentUser, admin }, {expiresIn: '6d'})
 
                     return {
-                        ...currentUser,
-                        isAdmin,
+                        ...currentUser, 
+                        admin,
                         accessToken
                     }
                 }
@@ -52,7 +52,7 @@ const handler = NextAuth({
             if(user){
                 token.accessToken = user.accessToken
                 token._id = user._id
-                token.isAdmin = user.isAdmin || false; 
+                token.admin = user.admin || false; 
             }
 
             return token
@@ -61,7 +61,7 @@ const handler = NextAuth({
             if(token){
                 session.user._id = token._id
                 session.user.accessToken = token.accessToken
-                session.user.isAdmin = token.isAdmin || false; 
+                session.user.admin = token.admin || false; 
             }
 
             return session

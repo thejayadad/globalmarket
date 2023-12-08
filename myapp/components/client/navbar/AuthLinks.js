@@ -50,7 +50,8 @@ const AuthLinks = () => {
                     </button>
                   </>
                 ) : (
-                  < div className='flex gap-8 flex-col'>
+                  < div className='flex gap-4 py-8 flex-col'>
+                    <span className='text-center text-md'>Access?</span>
                     <Register />
                     <Login />
                   </div>

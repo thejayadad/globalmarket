@@ -3,6 +3,7 @@ import { Inter, DM_Sans } from 'next/font/google'
 import './globals.css'
 import GlobalState from '@/context'
 import Navbar from '@/components/client/navbar/Navbar'
+import AuthProvider from '@/SessionProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 const dm_sans = DM_Sans({ subsets: ['latin'] })
@@ -17,12 +18,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={dm_sans.className}>
-        <GlobalState>
+      <AuthProvider>
+      <GlobalState>
           <Navbar />
           <div>
           {children}
           </div>
           </GlobalState>
+      </AuthProvider>
        </body>
     </html>
   )
