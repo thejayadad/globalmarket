@@ -4,6 +4,7 @@ import { FiUser } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Register from '@/components/userSignUp/Register';
+import Login from '@/components/userSignUp/Login';
 
 
 
@@ -51,6 +52,7 @@ const AuthLinks = () => {
                 ) : (
                   <>
                     <Register />
+                    <Login />
                   </>
                 )}
               </div>

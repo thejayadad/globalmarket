@@ -3,7 +3,6 @@ import React from 'react'
 import { useContext } from 'react';
 import { GlobalContext } from '@/context';
 import Modal from '../modal/Modal';
-import Input from './Input';
 import Logo from '../client/navbar/Logo';
 import Text from '@/Text/SmallText';
 import TitleText from '@/Text/TitleText';
@@ -33,7 +32,39 @@ const Register = () => {
     <DescriptionText className="text-gray-700">
     "Welcome to our vibrant community! Join us and unlock a world of possibilities. Connect with passionate individuals, share your ideas, and explore diverse content. Our platform offers a unique blend of knowledge, creativity, and entertainment. Don't miss out on exclusive features and exciting events. Join us today and be a part of a community that values connection, collaboration, and endless possibilities. Your journey starts here!"
     </DescriptionText>
-    </div>    
+    </div> 
+    <form className='flex flex-col'>
+    <div class="relative mb-4">
+    <label
+        className='leading-7 text-sm text-gray-600'
+        >UserName</label>
+    <input
+        className='input-signup'
+        placeholder='Username'
+        />
+        </div>
+        <div class="relative mb-4">
+    <label
+        className='leading-7 text-sm text-gray-600'
+        >Email</label>
+    <input
+        className='input-signup'
+        placeholder='Email'
+        />
+        </div>
+        <div class="relative mb-4">
+    <label
+        className='leading-7 text-sm text-gray-600'
+        >PassWord</label>
+    <input
+        className='input-signup'
+        placeholder='PassWord'
+        />
+        </div>
+        <button
+        className='text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-orange-300 rounded text-lg tracking-widest font-medium title-font'
+        >Create</button>
+    </form>   
     </div>        
     </div>
     </Modal>
