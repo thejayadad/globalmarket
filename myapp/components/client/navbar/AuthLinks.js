@@ -50,10 +50,10 @@ const AuthLinks = () => {
                     </button>
                   </>
                 ) : (
-                  <>
+                  < div className='flex gap-8 flex-col'>
                     <Register />
                     <Login />
-                  </>
+                  </div>
                 )}
               </div>
             </motion.div>
